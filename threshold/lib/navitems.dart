@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:threshold/colors.dart';
+import 'package:threshold/hover_extensions.dart';
 
 class AboutNav extends StatefulWidget {
   @override

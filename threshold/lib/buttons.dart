@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:threshold/colors.dart';
 import 'package:threshold/hover_extensions.dart';
 
+
 import 'dart:js' as js;
 
 
@@ -11,6 +12,8 @@ class LinkedinButton extends StatefulWidget {
 }
 
 class _LinkedinButtonState extends State<LinkedinButton> {
+
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -39,7 +42,7 @@ class _LinkedinButtonState extends State<LinkedinButton> {
           ),
         ),
       ),
-    ).showCursorOnHover;
+    ).showCursorOnHover.moveUpOnHover;
   }
 }
 
@@ -77,7 +80,7 @@ class _InstagramButtonState extends State<InstagramButton> {
           ),
         ),
       ),
-    ).showCursorOnHover;
+    ).showCursorOnHover.moveUpOnHover;
   }
 }
 
@@ -115,7 +118,7 @@ class _GithubButtonState extends State<GithubButton> {
           ),
         ),
       ),
-    ).showCursorOnHover;
+    ).showCursorOnHover.moveUpOnHover;
   }
 }
 
