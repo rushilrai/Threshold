@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:threshold/colors.dart';
+import 'package:threshold/hover_extensions.dart';
 
 class ThresholdCard extends StatefulWidget {
   @override
@@ -26,6 +27,6 @@ class _ThresholdCardState extends State<ThresholdCard> {
         fit: BoxFit.fill,
         )
       ),
-      );
+      ).moveDownOnHover;
   }
 }

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:threshold/rotateonhover.dart';
 import 'dart:html' as html;
 
 import 'package:threshold/translateonhover.dart';
 import 'package:threshold/translateonhover2.dart';
+import 'package:threshold/translateonhover3.dart';
 
 extension HoverExtensions on Widget {
   static final appContainer =
@@ -20,6 +22,17 @@ extension HoverExtensions on Widget {
     );
   }
 
+Widget get moveDownOnHover {
+    return TranslateOnHover3(
+      child: this,
+    );
+  }
+
+  Widget get rotateOnHover {
+    return RotateOnHover(
+      child: this,
+    );
+  }
 
   Widget get moveUpOnHover {
     return TranslateOnHover(

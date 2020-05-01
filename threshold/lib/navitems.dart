@@ -1,6 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:threshold/colors.dart';
 import 'package:threshold/hover_extensions.dart';
+import 'package:threshold/landingpage.dart';
+import 'package:threshold/workspage.dart';
+
+import 'aboutpage.dart';
 
 class AboutNav extends StatefulWidget {
   @override
@@ -11,16 +16,20 @@ class _AboutNavState extends State<AboutNav> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        Navigator.pushNamed(context, '/about');
+      onTap: () {
+        Navigator.push(
+          context,
+          CupertinoPageRoute(builder: (context) => AboutPage()),
+        );
       },
-          child: Text('About',
-      style: TextStyle(
-        color: blackColor,
-        fontFamily: 'Poppins',
-        fontWeight: FontWeight.w100,
-        fontSize: 24,
-      ),
+      child: Text(
+        'About',
+        style: TextStyle(
+          color: blackColor,
+          fontFamily: 'Poppins',
+          fontWeight: FontWeight.w100,
+          fontSize: 24,
+        ),
       ),
     ).showCursorOnHover.shiftOnHover;
   }
@@ -35,16 +44,20 @@ class _WorksNavState extends State<WorksNav> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        Navigator.pushNamed(context, '/works');
+      onTap: () {
+        Navigator.push(
+          context,
+          CupertinoPageRoute(builder: (context) => WorksPage()),
+        );
       },
-          child: Text('Works',
-      style: TextStyle(
-        color: blackColor,
-        fontFamily: 'Poppins',
-        fontWeight: FontWeight.w100,
-        fontSize: 24,
-      ),
+      child: Text(
+        'Works',
+        style: TextStyle(
+          color: blackColor,
+          fontFamily: 'Poppins',
+          fontWeight: FontWeight.w100,
+          fontSize: 24,
+        ),
       ),
     ).showCursorOnHover.shiftOnHover;
   }
@@ -59,16 +72,20 @@ class _HomeNavState extends State<HomeNav> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        Navigator.pushNamed(context, '/landing');
+      onTap: () {
+        Navigator.push(
+          context,
+          CupertinoPageRoute(builder: (context) => LandingPage()),
+        );
       },
-          child: Text('Home',
-      style: TextStyle(
-        color: blackColor,
-        fontFamily: 'Poppins',
-        fontWeight: FontWeight.w100,
-        fontSize: 24,
-      ),
+      child: Text(
+        'Home',
+        style: TextStyle(
+          color: blackColor,
+          fontFamily: 'Poppins',
+          fontWeight: FontWeight.w100,
+          fontSize: 24,
+        ),
       ),
     ).showCursorOnHover.shiftOnHover;
   }
@@ -77,13 +94,14 @@ class _HomeNavState extends State<HomeNav> {
 class LogoNav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Text('RR.',
-    style: TextStyle(
-      color: blackColor,
-      fontFamily: 'Poppins',
-      fontWeight: FontWeight.w400,
-      fontSize: 28,
-    ),
-    );
+    return Text(
+      'RR.',
+      style: TextStyle(
+        color: blackColor,
+        fontFamily: 'Poppins',
+        fontWeight: FontWeight.w400,
+        fontSize: 28,
+      ),
+    ).rotateOnHover.shiftOnHover;
   }
 }
