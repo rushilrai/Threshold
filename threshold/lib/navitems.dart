@@ -10,14 +10,19 @@ class AboutNav extends StatefulWidget {
 class _AboutNavState extends State<AboutNav> {
   @override
   Widget build(BuildContext context) {
-    return Text('About',
-    style: TextStyle(
-      color: blackColor,
-      fontFamily: 'Poppins',
-      fontWeight: FontWeight.w100,
-      fontSize: 24,
-    ),
-    );
+    return GestureDetector(
+      onTap: (){
+        Navigator.pushNamed(context, '/about');
+      },
+          child: Text('About',
+      style: TextStyle(
+        color: blackColor,
+        fontFamily: 'Poppins',
+        fontWeight: FontWeight.w100,
+        fontSize: 24,
+      ),
+      ),
+    ).showCursorOnHover.shiftOnHover;
   }
 }
 
@@ -29,14 +34,43 @@ class WorksNav extends StatefulWidget {
 class _WorksNavState extends State<WorksNav> {
   @override
   Widget build(BuildContext context) {
-    return Text('Works',
-    style: TextStyle(
-      color: blackColor,
-      fontFamily: 'Poppins',
-      fontWeight: FontWeight.w100,
-      fontSize: 24,
-    ),
-    );
+    return GestureDetector(
+      onTap: (){
+        Navigator.pushNamed(context, '/works');
+      },
+          child: Text('Works',
+      style: TextStyle(
+        color: blackColor,
+        fontFamily: 'Poppins',
+        fontWeight: FontWeight.w100,
+        fontSize: 24,
+      ),
+      ),
+    ).showCursorOnHover.shiftOnHover;
+  }
+}
+
+class HomeNav extends StatefulWidget {
+  @override
+  _HomeNavState createState() => _HomeNavState();
+}
+
+class _HomeNavState extends State<HomeNav> {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: (){
+        Navigator.pushNamed(context, '/landing');
+      },
+          child: Text('Home',
+      style: TextStyle(
+        color: blackColor,
+        fontFamily: 'Poppins',
+        fontWeight: FontWeight.w100,
+        fontSize: 24,
+      ),
+      ),
+    ).showCursorOnHover.shiftOnHover;
   }
 }
 
