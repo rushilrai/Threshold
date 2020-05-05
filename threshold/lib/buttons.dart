@@ -5,6 +5,8 @@ import 'package:threshold/hover_extensions.dart';
 
 import 'dart:js' as js;
 
+import 'package:threshold/sizes_helper.dart';
+
 
 class LinkedinButton extends StatefulWidget {
   @override
@@ -19,9 +21,9 @@ class _LinkedinButtonState extends State<LinkedinButton> {
     return GestureDetector(
       onTap: () {js.context.callMethod("open", ["https://www.linkedin.com/in/rushil-rai-07363116a"]);},
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 500),
-        height: 60,
-        width: 60,
+        duration: Duration(milliseconds: 800),
+        height: displayWidth(context)*0.04,
+        width: displayWidth(context)*0.04,
         decoration: BoxDecoration(
           color: beigeColor,
           boxShadow: [
@@ -57,9 +59,9 @@ class _InstagramButtonState extends State<InstagramButton> {
     return GestureDetector(
       onTap: () {js.context.callMethod("open", ["https://www.instagram.com/rushilrai/"]);},
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 500),
-        height: 60,
-        width: 60,
+        duration: Duration(milliseconds: 800),
+        height: displayWidth(context)*0.04,
+        width: displayWidth(context)*0.04,
         decoration: BoxDecoration(
           color: beigeColor,
           boxShadow: [
@@ -95,9 +97,9 @@ class _GithubButtonState extends State<GithubButton> {
     return GestureDetector(
       onTap: () {js.context.callMethod("open", ["https://github.com/rushilrai"]);},
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 500),
-        height: 60,
-        width: 60,
+        duration: Duration(milliseconds: 800),
+        height: displayWidth(context)*0.04,
+        width: displayWidth(context)*0.04,
         decoration: BoxDecoration(
           color: beigeColor,
           boxShadow: [

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:threshold/sizes_helper.dart';
 
 import 'colors.dart';
 
@@ -10,7 +11,7 @@ class LandingTextOne extends StatelessWidget {
       color: brownColor,
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w400,
-      fontSize: 50,
+      fontSize: displayWidth(context)*0.03,
     ),
     );
   }
@@ -24,7 +25,7 @@ class LandingTextTwo extends StatelessWidget {
       color: aquaColor,
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w400,
-      fontSize: 50,
+      fontSize: displayWidth(context)*0.03,
     ),
     );
   }
@@ -38,7 +39,7 @@ class LandingTextThree extends StatelessWidget {
       color: jadeColor,
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w400,
-      fontSize: 50,
+      fontSize: displayWidth(context)*0.03,
     ),
     );
   }

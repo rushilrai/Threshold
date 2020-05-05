@@ -73,6 +73,9 @@ flutter:
 
   assets: 
     - assets/images/Threshold.png
+    - assets/images/Education.png
+    - assets/images/Skills.png
+    - assets/images/Intro.png
     - assets/icons/icons8-github-30.png
     - assets/icons/icons8-instagram-30.png
     - assets/icons/icons8-linkedin-2-30.png

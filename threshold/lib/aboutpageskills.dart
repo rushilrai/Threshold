@@ -1,20 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:threshold/aboutpageskills.dart';
 import 'package:threshold/centeredview.dart';
 import 'package:threshold/colors.dart';
 import 'package:threshold/hover_extensions.dart';
 import 'package:threshold/navbar_about.dart';
 import 'package:threshold/sizes_helper.dart';
 
+import 'aboutpage.dart';
 import 'aboutpageedu.dart';
 
-class AboutPage extends StatefulWidget {
+class AboutPageSkills extends StatefulWidget {
   @override
-  _AboutPageState createState() => _AboutPageState();
+  _AboutPageSkillsState createState() => _AboutPageSkillsState();
 }
 
-class _AboutPageState extends State<AboutPage> {
+class _AboutPageSkillsState extends State<AboutPageSkills> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +34,7 @@ class _AboutPageState extends State<AboutPage> {
                   Column(
                     children: <Widget>[
                       Hero(
-                        tag: 'intro',
+                        tag: 'skills',
                         child: AnimatedContainer(
                           duration: Duration(milliseconds: 800),
                           height: displayWidth(context) * 0.35,
@@ -67,6 +67,42 @@ class _AboutPageState extends State<AboutPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
+                                builder: (context) => AboutPage()),
+                          );
+                        },
+                        child: Hero(
+                          tag: 'intro',
+                          child: AnimatedContainer(
+                            duration: Duration(milliseconds: 800),
+                            height: displayWidth(context) * 0.10,
+                            width: displayWidth(context) * 0.25,
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(20)),
+                              color: beigeColor,
+                              boxShadow: [
+                                BoxShadow(
+                                  offset: Offset(10, 10),
+                                  color: thresholdshadowColor,
+                                  blurRadius: 15,
+                                ),
+                              ],
+                              image: DecorationImage(
+                                image: AssetImage('assets/images/Intro.png'),
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ),
+                        ).showCursorOnHover.moveDownOnHover,
+                      ),
+                      SizedBox(
+                        height: 120,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
                                 builder: (context) => AboutPageEdu()),
                           );
                         },
@@ -90,42 +126,6 @@ class _AboutPageState extends State<AboutPage> {
                               image: DecorationImage(
                                 image:
                                     AssetImage('assets/images/Education.png'),
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
-                        ).showCursorOnHover.moveDownOnHover,
-                      ),
-                      SizedBox(
-                        height: 120,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => AboutPageSkills()),
-                          );
-                        },
-                        child: Hero(
-                          tag: 'skills',
-                          child: AnimatedContainer(
-                            duration: Duration(milliseconds: 800),
-                            height: displayWidth(context) * 0.10,
-                            width: displayWidth(context) * 0.25,
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
-                              color: beigeColor,
-                              boxShadow: [
-                                BoxShadow(
-                                  offset: Offset(10, 10),
-                                  color: thresholdshadowColor,
-                                  blurRadius: 15,
-                                ),
-                              ],
-                              image: DecorationImage(
-                                image: AssetImage('assets/images/Skills.png'),
                                 fit: BoxFit.fill,
                               ),
                             ),
