@@ -33,28 +33,25 @@ class _AboutPageEduState extends State<AboutPageEdu> {
                 children: <Widget>[
                   Column(
                     children: <Widget>[
-                      Hero(
-                        tag: 'education',
-                        child: AnimatedContainer(
-                          duration: Duration(milliseconds: 800),
-                          height: displayWidth(context) * 0.35,
-                          width: displayWidth(context) * 0.47,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(30)),
-                            color: beigeColor,
-                            boxShadow: [
-                              BoxShadow(
-                                color: lightshadowColor,
-                                offset: Offset(-5, -5),
-                                blurRadius: 10,
-                              ),
-                              BoxShadow(
-                                color: darkshadowColor,
-                                offset: Offset(5, 5),
-                                blurRadius: 10,
-                              ),
-                            ],
-                          ),
+                      AnimatedContainer(
+                        duration: Duration(milliseconds: 800),
+                        height: displayWidth(context) * 0.35,
+                        width: displayWidth(context) * 0.47,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(30)),
+                          color: beigeColor,
+                          boxShadow: [
+                            BoxShadow(
+                              color: lightshadowColor,
+                              offset: Offset(-5, -5),
+                              blurRadius: 10,
+                            ),
+                            BoxShadow(
+                              color: darkshadowColor,
+                              offset: Offset(5, 5),
+                              blurRadius: 10,
+                            ),
+                          ],
                         ),
                       ),
                     ],
