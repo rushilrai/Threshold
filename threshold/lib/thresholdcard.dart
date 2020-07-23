@@ -11,24 +11,26 @@ class ThresholdCard extends StatefulWidget {
 class _ThresholdCardState extends State<ThresholdCard> {
   @override
   Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: Duration(milliseconds: 800),
-      width: displayWidth(context) * 0.4,
-      height: displayWidth(context) * 0.32,
-      decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            offset: Offset(25, 25),
-            color: thresholdshadowColor,
-            blurRadius: 25,
+    return MouseRegion(
+      child: AnimatedContainer(
+        duration: Duration(milliseconds: 800),
+        width: displayWidth(context) * 0.4,
+        height: displayWidth(context) * 0.32,
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              offset: Offset(25, 25),
+              color: thresholdshadowColor,
+              blurRadius: 25,
+            ),
+          ],
+          borderRadius: BorderRadius.all(Radius.circular(50)),
+          image: DecorationImage(
+            image: AssetImage('assets/images/Threshold.png'),
+            fit: BoxFit.fill,
           ),
-        ],
-        borderRadius: BorderRadius.all(Radius.circular(50)),
-        image: DecorationImage(
-          image: AssetImage('assets/images/Threshold.png'),
-          fit: BoxFit.fill,
         ),
-      ),
-    ).moveDownOnHover;
+      ).moveDownOnHover,
+    );
   }
 }

@@ -7,7 +7,6 @@ import 'package:threshold/thresholdcard.dart';
 
 import 'landingtext.dart';
 
-
 class LandingPage extends StatefulWidget {
   @override
   _LandingPageState createState() => _LandingPageState();
@@ -20,6 +19,7 @@ class _LandingPageState extends State<LandingPage> {
       backgroundColor: beigeColor,
       body: CenteredView(
         child: ListView(
+          physics: BouncingScrollPhysics(),
           children: <Widget>[
             NavBar(),
             SizedBox(

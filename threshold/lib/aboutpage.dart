@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:threshold/aboutpageskills.dart';
 import 'package:threshold/buttons.dart';
 import 'package:threshold/centeredview.dart';
@@ -77,8 +78,7 @@ class _AboutPageState extends State<AboutPage> {
                                         color: brownColor,
                                         fontFamily: 'Poppins',
                                         fontWeight: FontWeight.w400,
-                                        fontSize:
-                                            displayWidth(context) * 0.030,
+                                        fontSize: displayWidth(context) * 0.030,
                                       ),
                                     ),
                                   ],
@@ -200,8 +200,8 @@ class _AboutPageState extends State<AboutPage> {
                               ),
                               Spacer(),
                               Padding(
-                                padding: const EdgeInsets.only(
-                                    top: 10, bottom: 10),
+                                padding:
+                                    const EdgeInsets.only(top: 10, bottom: 10),
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
@@ -220,75 +220,81 @@ class _AboutPageState extends State<AboutPage> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: <Widget>[
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => AboutPageEdu()),
-                          );
-                        },
-                        child: Hero(
-                          tag: 'education',
-                          child: AnimatedContainer(
-                            duration: Duration(milliseconds: 800),
-                            height: displayWidth(context) * 0.10,
-                            width: displayWidth(context) * 0.25,
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
-                              color: beigeColor,
-                              boxShadow: [
-                                BoxShadow(
-                                  offset: Offset(10, 10),
-                                  color: thresholdshadowColor,
-                                  blurRadius: 15,
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => AboutPageEdu()),
+                            );
+                          },
+                          child: Hero(
+                            tag: 'education',
+                            child: AnimatedContainer(
+                              duration: Duration(milliseconds: 800),
+                              height: displayWidth(context) * 0.10,
+                              width: displayWidth(context) * 0.25,
+                              decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20)),
+                                color: beigeColor,
+                                boxShadow: [
+                                  BoxShadow(
+                                    offset: Offset(10, 10),
+                                    color: thresholdshadowColor,
+                                    blurRadius: 15,
+                                  ),
+                                ],
+                                image: DecorationImage(
+                                  image:
+                                      AssetImage('assets/images/Education.png'),
+                                  fit: BoxFit.fill,
                                 ),
-                              ],
-                              image: DecorationImage(
-                                image:
-                                    AssetImage('assets/images/Education.png'),
-                                fit: BoxFit.fill,
                               ),
                             ),
-                          ),
-                        ).showCursorOnHover.moveDownOnHover,
+                          ).showCursorOnHover.moveDownOnHover,
+                        ),
                       ),
                       SizedBox(
                         height: 120,
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => AboutPageSkills()),
-                          );
-                        },
-                        child: Hero(
-                          tag: 'skills',
-                          child: AnimatedContainer(
-                            duration: Duration(milliseconds: 800),
-                            height: displayWidth(context) * 0.10,
-                            width: displayWidth(context) * 0.25,
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
-                              color: beigeColor,
-                              boxShadow: [
-                                BoxShadow(
-                                  offset: Offset(10, 10),
-                                  color: thresholdshadowColor,
-                                  blurRadius: 15,
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => AboutPageSkills()),
+                            );
+                          },
+                          child: Hero(
+                            tag: 'skills',
+                            child: AnimatedContainer(
+                              duration: Duration(milliseconds: 800),
+                              height: displayWidth(context) * 0.10,
+                              width: displayWidth(context) * 0.25,
+                              decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20)),
+                                color: beigeColor,
+                                boxShadow: [
+                                  BoxShadow(
+                                    offset: Offset(10, 10),
+                                    color: thresholdshadowColor,
+                                    blurRadius: 15,
+                                  ),
+                                ],
+                                image: DecorationImage(
+                                  image: AssetImage('assets/images/Skills.png'),
+                                  fit: BoxFit.fill,
                                 ),
-                              ],
-                              image: DecorationImage(
-                                image: AssetImage('assets/images/Skills.png'),
-                                fit: BoxFit.fill,
                               ),
                             ),
-                          ),
-                        ).showCursorOnHover.moveDownOnHover,
+                          ).showCursorOnHover.moveDownOnHover,
+                        ),
                       ),
                     ],
                   ),

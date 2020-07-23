@@ -111,20 +111,49 @@ class _HomeNavState extends State<HomeNav> {
   }
 }
 
-class LogoNav extends StatelessWidget {
+class LogoNav extends StatefulWidget {
+  @override
+  _LogoNavState createState() => _LogoNavState();
+}
+
+class _LogoNavState extends State<LogoNav> {
+  double lineWidth = 0;
   @override
   Widget build(BuildContext context) {
-    return Hero(
-      tag: "rr",
-      child: Text(
-        'RR.',
-        style: TextStyle(
-          color: blackColor,
-          fontFamily: 'Poppins',
-          fontWeight: FontWeight.w400,
-          fontSize: displayWidth(context) * 0.018,
-        ),
-      ).rotateOnHover.shiftOnHover,
+    return MouseRegion(
+      onEnter: (event) {
+        setState(() {
+          lineWidth = displayWidth(context) * 0.024;
+        });
+      },
+      onExit: (event) {
+        setState(() {
+          lineWidth = 0;
+        });
+      },
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Hero(
+            tag: "rr",
+            child: Text(
+              'RR.',
+              style: TextStyle(
+                color: blackColor,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w400,
+                fontSize: displayWidth(context) * 0.018,
+              ),
+            ),
+          ),
+          AnimatedContainer(
+            duration: Duration(milliseconds: 200),
+            width: lineWidth,
+            height: 1.5,
+            color: blackColor,
+          ),
+        ],
+      ),
     );
   }
 }
