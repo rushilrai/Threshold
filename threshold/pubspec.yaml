@@ -18,6 +18,7 @@ dependencies:
   url_launcher_web: ^0.1.1+6
   url_launcher: ^5.4.11
   dwds: ^5.0.0
+  carousel_slider: ^2.2.1
 
   cupertino_icons: ^0.1.3
 

@@ -24,7 +24,7 @@ class _ThresholdCardState extends State<ThresholdCard> {
               blurRadius: 25,
             ),
           ],
-          borderRadius: BorderRadius.all(Radius.circular(50)),
+          borderRadius: BorderRadius.all(Radius.circular(30)),
           image: DecorationImage(
             image: AssetImage('assets/images/Threshold.png'),
             fit: BoxFit.fill,

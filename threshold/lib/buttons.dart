@@ -59,7 +59,7 @@ class _LinkedinButtonState extends State<LinkedinButton> {
                 blurRadius: 10,
               ),
             ],
-            borderRadius: BorderRadius.all(Radius.circular(17)),
+            borderRadius: BorderRadius.all(Radius.circular(12)),
             image: DecorationImage(
               image: AssetImage('assets/icons/icons8-linkedin-2-30.png'),
             ),
@@ -123,7 +123,7 @@ class _InstagramButtonState extends State<InstagramButton> {
                 blurRadius: 10,
               ),
             ],
-            borderRadius: BorderRadius.all(Radius.circular(17)),
+            borderRadius: BorderRadius.all(Radius.circular(12)),
             image: DecorationImage(
               image: AssetImage('assets/icons/icons8-instagram-30.png'),
             ),
@@ -186,7 +186,7 @@ class _GithubButtonState extends State<GithubButton> {
                 blurRadius: 10,
               ),
             ],
-            borderRadius: BorderRadius.all(Radius.circular(17)),
+            borderRadius: BorderRadius.all(Radius.circular(12)),
             image: DecorationImage(
               image: AssetImage('assets/icons/icons8-github-30.png'),
             ),

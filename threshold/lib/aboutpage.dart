@@ -40,7 +40,7 @@ class _AboutPageState extends State<AboutPage> {
                         height: displayWidth(context) * 0.35,
                         width: displayWidth(context) * 0.47,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(30)),
+                          borderRadius: BorderRadius.all(Radius.circular(25)),
                           color: beigeColor,
                           boxShadow: [
                             BoxShadow(
@@ -62,7 +62,8 @@ class _AboutPageState extends State<AboutPage> {
                             left: 35,
                             right: 25,
                           ),
-                          child: Column(
+                          child: ListView(
+                            physics: BouncingScrollPhysics(),
                             children: <Widget>[
                               Padding(
                                 padding: const EdgeInsets.only(
@@ -238,7 +239,7 @@ class _AboutPageState extends State<AboutPage> {
                               width: displayWidth(context) * 0.25,
                               decoration: BoxDecoration(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(20)),
+                                    BorderRadius.all(Radius.circular(10)),
                                 color: beigeColor,
                                 boxShadow: [
                                   BoxShadow(
@@ -278,7 +279,7 @@ class _AboutPageState extends State<AboutPage> {
                               width: displayWidth(context) * 0.25,
                               decoration: BoxDecoration(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(20)),
+                                    BorderRadius.all(Radius.circular(10)),
                                 color: beigeColor,
                                 boxShadow: [
                                   BoxShadow(

@@ -15,29 +15,53 @@ class AboutNav extends StatefulWidget {
 }
 
 class _AboutNavState extends State<AboutNav> {
+  double lineWidth = 0;
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
       cursor: SystemMouseCursors.click,
-      child: Hero(
-        tag: "about",
-        child: GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              CupertinoPageRoute(builder: (context) => AboutPage()),
-            );
-          },
-          child: Text(
-            'About',
-            style: TextStyle(
-              color: blackColor,
-              fontFamily: 'Poppins',
-              fontWeight: FontWeight.w100,
-              fontSize: displayWidth(context) * 0.015,
-            ),
+      onEnter: (event) {
+        setState(() {
+          lineWidth = displayWidth(context) * 0.024;
+        });
+      },
+      onExit: (event) {
+        setState(() {
+          lineWidth = 0;
+        });
+      },
+      child: Column(
+        children: [
+          Hero(
+            tag: "about",
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(builder: (context) => AboutPage()),
+                );
+              },
+              child: Material(
+                type: MaterialType.transparency,
+                child: Text(
+                  'About',
+                  style: TextStyle(
+                    color: blackColor,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w100,
+                    fontSize: displayWidth(context) * 0.015,
+                  ),
+                ),
+              ),
+            ).showCursorOnHover.shiftOnHover,
           ),
-        ).showCursorOnHover.shiftOnHover,
+          AnimatedContainer(
+            duration: Duration(milliseconds: 200),
+            width: lineWidth,
+            height: 1.5,
+            color: blackColor,
+          ),
+        ],
       ),
     );
   }
@@ -49,29 +73,53 @@ class WorksNav extends StatefulWidget {
 }
 
 class _WorksNavState extends State<WorksNav> {
+  double lineWidth = 0;
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
       cursor: SystemMouseCursors.click,
-      child: Hero(
-        tag: "works",
-        child: GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              CupertinoPageRoute(builder: (context) => WorksPage()),
-            );
-          },
-          child: Text(
-            'Works',
-            style: TextStyle(
-              color: blackColor,
-              fontFamily: 'Poppins',
-              fontWeight: FontWeight.w100,
-              fontSize: displayWidth(context) * 0.015,
-            ),
+      onEnter: (event) {
+        setState(() {
+          lineWidth = displayWidth(context) * 0.024;
+        });
+      },
+      onExit: (event) {
+        setState(() {
+          lineWidth = 0;
+        });
+      },
+      child: Column(
+        children: [
+          Hero(
+            tag: "works",
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(builder: (context) => WorksPage()),
+                );
+              },
+              child: Material(
+                type: MaterialType.transparency,
+                child: Text(
+                  'Works',
+                  style: TextStyle(
+                    color: blackColor,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w100,
+                    fontSize: displayWidth(context) * 0.015,
+                  ),
+                ),
+              ),
+            ).showCursorOnHover.shiftOnHover,
           ),
-        ).showCursorOnHover.shiftOnHover,
+          AnimatedContainer(
+            duration: Duration(milliseconds: 200),
+            width: lineWidth,
+            height: 1.5,
+            color: blackColor,
+          ),
+        ],
       ),
     );
   }
@@ -83,29 +131,53 @@ class HomeNav extends StatefulWidget {
 }
 
 class _HomeNavState extends State<HomeNav> {
+  double lineWidth = 0;
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
       cursor: SystemMouseCursors.click,
-      child: Hero(
-        tag: "home",
-        child: GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              CupertinoPageRoute(builder: (context) => LandingPage()),
-            );
-          },
-          child: Text(
-            'Home',
-            style: TextStyle(
-              color: blackColor,
-              fontFamily: 'Poppins',
-              fontWeight: FontWeight.w100,
-              fontSize: displayWidth(context) * 0.015,
-            ),
+      onEnter: (event) {
+        setState(() {
+          lineWidth = displayWidth(context) * 0.024;
+        });
+      },
+      onExit: (event) {
+        setState(() {
+          lineWidth = 0;
+        });
+      },
+      child: Column(
+        children: [
+          Hero(
+            tag: "home",
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(builder: (context) => LandingPage()),
+                );
+              },
+              child: Material(
+                type: MaterialType.transparency,
+                child: Text(
+                  'Home',
+                  style: TextStyle(
+                    color: blackColor,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w100,
+                    fontSize: displayWidth(context) * 0.015,
+                  ),
+                ),
+              ),
+            ).showCursorOnHover.shiftOnHover,
           ),
-        ).showCursorOnHover.shiftOnHover,
+          AnimatedContainer(
+            duration: Duration(milliseconds: 200),
+            width: lineWidth,
+            height: 1.5,
+            color: blackColor,
+          ),
+        ],
       ),
     );
   }
@@ -136,13 +208,16 @@ class _LogoNavState extends State<LogoNav> {
         children: [
           Hero(
             tag: "rr",
-            child: Text(
-              'RR.',
-              style: TextStyle(
-                color: blackColor,
-                fontFamily: 'Poppins',
-                fontWeight: FontWeight.w400,
-                fontSize: displayWidth(context) * 0.018,
+            child: Material(
+              type: MaterialType.transparency,
+              child: Text(
+                'RR.',
+                style: TextStyle(
+                  color: blackColor,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w400,
+                  fontSize: displayWidth(context) * 0.018,
+                ),
               ),
             ),
           ),
