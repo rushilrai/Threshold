@@ -195,7 +195,7 @@ class _LogoNavState extends State<LogoNav> {
     return MouseRegion(
       onEnter: (event) {
         setState(() {
-          lineWidth = displayWidth(context) * 0.024;
+          lineWidth = displayWidth(context) * 0.022;
         });
       },
       onExit: (event) {
@@ -216,7 +216,7 @@ class _LogoNavState extends State<LogoNav> {
                   color: blackColor,
                   fontFamily: 'Poppins',
                   fontWeight: FontWeight.w400,
-                  fontSize: displayWidth(context) * 0.018,
+                  fontSize: displayWidth(context) * 0.015,
                 ),
               ),
             ),

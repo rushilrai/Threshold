@@ -25,7 +25,7 @@ class _AboutPageSkillsState extends State<AboutPageSkills> {
           children: <Widget>[
             NavBarAbout(),
             SizedBox(
-              height: 100,
+              height: 50,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40.0, right: 40.0),

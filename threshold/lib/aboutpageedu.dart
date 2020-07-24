@@ -25,7 +25,7 @@ class _AboutPageEduState extends State<AboutPageEdu> {
           children: <Widget>[
             NavBarAbout(),
             SizedBox(
-              height: 100,
+              height: 50,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40.0, right: 40.0),
@@ -62,6 +62,7 @@ class _AboutPageEduState extends State<AboutPageEdu> {
                             right: 25,
                           ),
                           child: ListView(
+                            shrinkWrap: true,
                             physics: BouncingScrollPhysics(),
                             children: <Widget>[
                               Padding(

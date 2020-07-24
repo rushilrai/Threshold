@@ -1,12 +1,8 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:threshold/buttons.dart';
 import 'package:threshold/centeredview.dart';
 import 'package:threshold/colors.dart';
 import 'package:threshold/navbar_works.dart';
-import 'package:threshold/thresholdcard.dart';
-
-import 'landingtext.dart';
-
 
 class WorksPage extends StatefulWidget {
   @override
@@ -25,46 +21,13 @@ class _WorksPageState extends State<WorksPage> {
             SizedBox(
               height: 100,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Column(
-                  children: <Widget>[
-                    ThresholdCard(),
-                  ],
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: <Widget>[
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: <Widget>[
-                        LandingTextOne(),
-                        LandingTextTwo(),
-                        LandingTextThree(),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 200,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 15.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          SizedBox(
-                            width: 50,
-                          ),
-                          LinkedinButton(),
-                          SizedBox(
-                            width: 50,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+            CarouselSlider(
+              items: [
+                Container(
+                  color: jadeColor,
                 )
               ],
+              options: CarouselOptions(aspectRatio: 4 / 3),
             ),
             SizedBox(
               height: 100,

@@ -26,7 +26,7 @@ class _AboutPageState extends State<AboutPage> {
           children: <Widget>[
             NavBarAbout(),
             SizedBox(
-              height: 90,
+              height: 50,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40.0, right: 40.0),

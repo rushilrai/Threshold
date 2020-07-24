@@ -23,7 +23,7 @@ class _LandingPageState extends State<LandingPage> {
           children: <Widget>[
             NavBar(),
             SizedBox(
-              height: 100,
+              height: 50,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
