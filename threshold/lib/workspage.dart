@@ -19,7 +19,7 @@ class _WorksPageState extends State<WorksPage> {
           children: <Widget>[
             NavBarWorks(),
             SizedBox(
-              height: 100,
+              height: 50,
             ),
             CarouselSlider(
               items: [

@@ -84,7 +84,7 @@ class _AboutPageSkillsState extends State<AboutPageSkills> {
                                   ],
                                 ),
                               ),
-                              Spacer(),
+                              // Spacer(),
                               Row(
                                 children: <Widget>[
                                   Text(
@@ -280,7 +280,7 @@ class _AboutPageSkillsState extends State<AboutPageSkills> {
                                   ),
                                 ],
                               ),
-                              Spacer(),
+                              //Spacer(),
                             ],
                           ),
                         ),

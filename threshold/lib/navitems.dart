@@ -102,7 +102,7 @@ class _WorksNavState extends State<WorksNav> {
               child: Material(
                 type: MaterialType.transparency,
                 child: Text(
-                  'Works',
+                  'Work',
                   style: TextStyle(
                     color: blackColor,
                     fontFamily: 'Poppins',

@@ -23,6 +23,7 @@ class _AboutPageState extends State<AboutPage> {
       backgroundColor: beigeColor,
       body: CenteredView(
         child: ListView(
+          physics: BouncingScrollPhysics(),
           children: <Widget>[
             NavBarAbout(),
             SizedBox(
@@ -85,7 +86,7 @@ class _AboutPageState extends State<AboutPage> {
                                   ],
                                 ),
                               ),
-                              Spacer(),
+                              //Spacer(),
                               Row(
                                 children: <Widget>[
                                   Text(
@@ -199,7 +200,10 @@ class _AboutPageState extends State<AboutPage> {
                                   ),
                                 ],
                               ),
-                              Spacer(),
+                              //Spacer(),
+                              SizedBox(
+                                height: 10,
+                              ),
                               Padding(
                                 padding:
                                     const EdgeInsets.only(top: 10, bottom: 10),

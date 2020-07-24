@@ -62,7 +62,7 @@ class _AboutPageEduState extends State<AboutPageEdu> {
                             right: 25,
                           ),
                           child: ListView(
-                            shrinkWrap: true,
+                            //shrinkWrap: true,
                             physics: BouncingScrollPhysics(),
                             children: <Widget>[
                               Padding(
@@ -85,7 +85,7 @@ class _AboutPageEduState extends State<AboutPageEdu> {
                                   ],
                                 ),
                               ),
-                              Spacer(),
+                              //Spacer(),
                               Row(
                                 children: <Widget>[
                                   Text(
@@ -177,7 +177,7 @@ class _AboutPageEduState extends State<AboutPageEdu> {
                                   ),
                                 ],
                               ),
-                              Spacer(),
+                              //Spacer(),
                             ],
                           ),
                         ),
