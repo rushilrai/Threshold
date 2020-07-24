@@ -252,9 +252,12 @@ class _AboutPageState extends State<AboutPage> {
                                     blurRadius: 15,
                                   ),
                                 ],
-                                image: DecorationImage(
-                                  image:
-                                      AssetImage('assets/images/Education.png'),
+                              ),
+                              child: ClipRRect(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                child: Image.asset(
+                                  'assets/images/Education.png',
                                   fit: BoxFit.fill,
                                 ),
                               ),
@@ -292,8 +295,12 @@ class _AboutPageState extends State<AboutPage> {
                                     blurRadius: 15,
                                   ),
                                 ],
-                                image: DecorationImage(
-                                  image: AssetImage('assets/images/Skills.png'),
+                              ),
+                              child: ClipRRect(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                child: Image.asset(
+                                  'assets/images/Skills.png',
                                   fit: BoxFit.fill,
                                 ),
                               ),

@@ -1,8 +1,10 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:threshold/centeredview.dart';
 import 'package:threshold/colors.dart';
 import 'package:threshold/navbar_works.dart';
+import 'package:threshold/workcards.dart';
+
+import 'sizes_helper.dart';
 
 class WorksPage extends StatefulWidget {
   @override
@@ -16,21 +18,24 @@ class _WorksPageState extends State<WorksPage> {
       backgroundColor: beigeColor,
       body: CenteredView(
         child: ListView(
+          physics: BouncingScrollPhysics(),
           children: <Widget>[
             NavBarWorks(),
             SizedBox(
-              height: 50,
+              height: 20,
             ),
-            CarouselSlider(
-              items: [
-                Container(
-                  color: jadeColor,
-                )
-              ],
-              options: CarouselOptions(aspectRatio: 4 / 3),
-            ),
-            SizedBox(
-              height: 100,
+            Container(
+              height: displayHeight(context) * 0.8,
+              child: ListView(
+                physics: BouncingScrollPhysics(),
+                shrinkWrap: true,
+                children: [
+                  ThresholdCard(),
+                  ArenaCard(),
+                  HustleCard(),
+                  PointifyCard(),
+                ],
+              ),
             ),
           ],
         ),

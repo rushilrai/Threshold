@@ -22,6 +22,7 @@ class _AboutPageSkillsState extends State<AboutPageSkills> {
       backgroundColor: beigeColor,
       body: CenteredView(
         child: ListView(
+          physics: BouncingScrollPhysics(),
           children: <Widget>[
             NavBarAbout(),
             SizedBox(
@@ -317,8 +318,12 @@ class _AboutPageSkillsState extends State<AboutPageSkills> {
                                     blurRadius: 15,
                                   ),
                                 ],
-                                image: DecorationImage(
-                                  image: AssetImage('assets/images/Intro.png'),
+                              ),
+                              child: ClipRRect(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                child: Image.asset(
+                                  'assets/images/Intro.png',
                                   fit: BoxFit.fill,
                                 ),
                               ),
@@ -356,9 +361,12 @@ class _AboutPageSkillsState extends State<AboutPageSkills> {
                                     blurRadius: 15,
                                   ),
                                 ],
-                                image: DecorationImage(
-                                  image:
-                                      AssetImage('assets/images/Education.png'),
+                              ),
+                              child: ClipRRect(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                child: Image.asset(
+                                  'assets/images/Education.png',
                                   fit: BoxFit.fill,
                                 ),
                               ),
