@@ -314,7 +314,7 @@ class _UjjayCardState extends State<UjjayCard> {
               padding: const EdgeInsets.all(15.0),
               child: Align(
                 alignment: Alignment.bottomCenter,
-                child: (hover) ? PointifyDetailsButton() : null,
+                child: (hover) ? UjjayDetailsButton() : null,
               ),
             ),
           ],

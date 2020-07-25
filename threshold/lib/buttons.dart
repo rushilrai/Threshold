@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+import 'package:threshold/centeredview.dart';
 import 'package:threshold/colors.dart';
 import 'package:threshold/sizes_helper.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -383,6 +385,341 @@ class _PhoneButtonState extends State<PhoneButton> {
   }
 }
 
+class UjjayProjectButton extends StatefulWidget {
+  @override
+  _UjjayProjectButtonState createState() => _UjjayProjectButtonState();
+}
+
+class _UjjayProjectButtonState extends State<UjjayProjectButton> {
+  List<Color> colors = [beigeColor, beigeColor];
+  Offset lightShadow = Offset(-5, -5);
+  Offset darkShadow = Offset(5, 5);
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (event) {
+        setState(() {
+          lightShadow = Offset(0, 0);
+          darkShadow = Offset(0, 0);
+          colors = [
+            //    Color.fromRGBO(255, 254, 239, 1),
+            Color.fromRGBO(230, 213, 201, 1),
+            Color.fromRGBO(250, 239, 232, 1),
+          ];
+        });
+      },
+      onExit: (event) {
+        setState(() {
+          lightShadow = Offset(-5, -5);
+          darkShadow = Offset(5, 5);
+          colors = [beigeColor, beigeColor];
+        });
+      },
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: () {
+          launch(
+              "https://play.google.com/store/apps/details?id=com.app2.farmringg&hl=en");
+        },
+        child: AnimatedContainer(
+          duration: Duration(milliseconds: 400),
+          height: displayWidth(context) * 0.025,
+          width: displayWidth(context) * 0.12,
+          decoration: BoxDecoration(
+            color: beigeColor,
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: colors,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: lightshadowColor,
+                offset: lightShadow,
+                blurRadius: 10,
+              ),
+              BoxShadow(
+                color: darkshadowColor,
+                offset: darkShadow,
+                blurRadius: 10,
+              ),
+            ],
+            borderRadius: BorderRadius.all(Radius.circular(17)),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Text(
+                  'View Project',
+                  style: TextStyle(
+                    color: brownColor,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w200,
+                    fontSize: displayWidth(context) * 0.012,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class PointifyProjectButton extends StatefulWidget {
+  @override
+  _PointifyProjectButtonState createState() => _PointifyProjectButtonState();
+}
+
+class _PointifyProjectButtonState extends State<PointifyProjectButton> {
+  List<Color> colors = [beigeColor, beigeColor];
+  Offset lightShadow = Offset(-5, -5);
+  Offset darkShadow = Offset(5, 5);
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (event) {
+        setState(() {
+          lightShadow = Offset(0, 0);
+          darkShadow = Offset(0, 0);
+          colors = [
+            //    Color.fromRGBO(255, 254, 239, 1),
+            Color.fromRGBO(230, 213, 201, 1),
+            Color.fromRGBO(250, 239, 232, 1),
+          ];
+        });
+      },
+      onExit: (event) {
+        setState(() {
+          lightShadow = Offset(-5, -5);
+          darkShadow = Offset(5, 5);
+          colors = [beigeColor, beigeColor];
+        });
+      },
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: () {
+          launch(
+              "https://play.google.com/store/apps/details?id=com.app2.farmringg&hl=en");
+        },
+        child: AnimatedContainer(
+          duration: Duration(milliseconds: 400),
+          height: displayWidth(context) * 0.025,
+          width: displayWidth(context) * 0.12,
+          decoration: BoxDecoration(
+            color: beigeColor,
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: colors,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: lightshadowColor,
+                offset: lightShadow,
+                blurRadius: 10,
+              ),
+              BoxShadow(
+                color: darkshadowColor,
+                offset: darkShadow,
+                blurRadius: 10,
+              ),
+            ],
+            borderRadius: BorderRadius.all(Radius.circular(17)),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Text(
+                  'View Project',
+                  style: TextStyle(
+                    color: brownColor,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w200,
+                    fontSize: displayWidth(context) * 0.012,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class HustleProjectButton extends StatefulWidget {
+  @override
+  _HustleProjectButtonState createState() => _HustleProjectButtonState();
+}
+
+class _HustleProjectButtonState extends State<HustleProjectButton> {
+  List<Color> colors = [beigeColor, beigeColor];
+  Offset lightShadow = Offset(-5, -5);
+  Offset darkShadow = Offset(5, 5);
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (event) {
+        setState(() {
+          lightShadow = Offset(0, 0);
+          darkShadow = Offset(0, 0);
+          colors = [
+            //    Color.fromRGBO(255, 254, 239, 1),
+            Color.fromRGBO(230, 213, 201, 1),
+            Color.fromRGBO(250, 239, 232, 1),
+          ];
+        });
+      },
+      onExit: (event) {
+        setState(() {
+          lightShadow = Offset(-5, -5);
+          darkShadow = Offset(5, 5);
+          colors = [beigeColor, beigeColor];
+        });
+      },
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: () {
+          launch(
+              "https://play.google.com/store/apps/details?id=com.rr.hustle2");
+        },
+        child: AnimatedContainer(
+          duration: Duration(milliseconds: 400),
+          height: displayWidth(context) * 0.025,
+          width: displayWidth(context) * 0.12,
+          decoration: BoxDecoration(
+            color: beigeColor,
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: colors,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: lightshadowColor,
+                offset: lightShadow,
+                blurRadius: 10,
+              ),
+              BoxShadow(
+                color: darkshadowColor,
+                offset: darkShadow,
+                blurRadius: 10,
+              ),
+            ],
+            borderRadius: BorderRadius.all(Radius.circular(17)),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Text(
+                  'View Project',
+                  style: TextStyle(
+                    color: brownColor,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w200,
+                    fontSize: displayWidth(context) * 0.012,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ArenaProjectButton extends StatefulWidget {
+  @override
+  _ArenaProjectButtonState createState() => _ArenaProjectButtonState();
+}
+
+class _ArenaProjectButtonState extends State<ArenaProjectButton> {
+  List<Color> colors = [beigeColor, beigeColor];
+  Offset lightShadow = Offset(-5, -5);
+  Offset darkShadow = Offset(5, 5);
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (event) {
+        setState(() {
+          lightShadow = Offset(0, 0);
+          darkShadow = Offset(0, 0);
+          colors = [
+            //    Color.fromRGBO(255, 254, 239, 1),
+            Color.fromRGBO(230, 213, 201, 1),
+            Color.fromRGBO(250, 239, 232, 1),
+          ];
+        });
+      },
+      onExit: (event) {
+        setState(() {
+          lightShadow = Offset(-5, -5);
+          darkShadow = Offset(5, 5);
+          colors = [beigeColor, beigeColor];
+        });
+      },
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: () {
+          launch("https://github.com/mihirs16/Arena");
+        },
+        child: AnimatedContainer(
+          duration: Duration(milliseconds: 400),
+          height: displayWidth(context) * 0.025,
+          width: displayWidth(context) * 0.12,
+          decoration: BoxDecoration(
+            color: beigeColor,
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: colors,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: lightshadowColor,
+                offset: lightShadow,
+                blurRadius: 10,
+              ),
+              BoxShadow(
+                color: darkshadowColor,
+                offset: darkShadow,
+                blurRadius: 10,
+              ),
+            ],
+            borderRadius: BorderRadius.all(Radius.circular(17)),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Text(
+                  'View Project',
+                  style: TextStyle(
+                    color: brownColor,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w200,
+                    fontSize: displayWidth(context) * 0.012,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class ThresholdDetailsButton extends StatefulWidget {
   @override
   _ThresholdDetailsButtonState createState() => _ThresholdDetailsButtonState();
@@ -512,7 +849,113 @@ class _HustleDetailsButtonState extends State<HustleDetailsButton> {
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: () {
-          launch("tel:+919650693092");
+          showMaterialModalBottomSheet(
+            enableDrag: false,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
+            )),
+            context: context,
+            builder: (context, scrollController) => Container(
+              height: displayHeight(context) * 0.9,
+              decoration: BoxDecoration(
+                color: beigeColor,
+              ),
+              child: CenteredView(
+                child: ListView(
+                  shrinkWrap: true,
+                  physics: BouncingScrollPhysics(),
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconButton(
+                          icon: Icon(
+                            Icons.arrow_back_ios,
+                            color: brownColor,
+                            size: displayWidth(context) * 0.025,
+                          ),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Hustle',
+                              style: TextStyle(
+                                color: brownColor,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w200,
+                                fontSize: displayWidth(context) * 0.025,
+                              ),
+                            ),
+                            TweenAnimationBuilder(
+                              duration: Duration(milliseconds: 1000),
+                              tween: Tween<double>(
+                                begin: 0,
+                                end: displayWidth(context) * 0.06,
+                              ),
+                              builder: (context, value, child) {
+                                return AnimatedContainer(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(30),
+                                    color: brownColor,
+                                  ),
+                                  duration: Duration(milliseconds: 200),
+                                  width: value,
+                                  height: 2.5,
+                                );
+                              },
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Text(
+                      "Hustle, a Simple and Minimal Counter App. \nHustle allows you to easily track your habits, goals and routine. \nWith a beautiful and pleasing interface, it was made with Ease of Use in mind. \nAlso, it features a Dark Mode, for all those who Hustle at Night.",
+                      style: TextStyle(
+                        color: aquaColor,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w200,
+                        fontSize: displayWidth(context) * 0.02,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        HustleProjectButton(),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      height: displayHeight(context) * 0.8,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage(
+                                'assets/images/workbg/hustle/hustledetails.png'),
+                          )),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          );
         },
         child: TweenAnimationBuilder(
           tween: Tween<double>(
@@ -608,7 +1051,113 @@ class _PointifyDetailsButtonState extends State<PointifyDetailsButton> {
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: () {
-          launch("tel:+919650693092");
+          showMaterialModalBottomSheet(
+            enableDrag: false,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
+            )),
+            context: context,
+            builder: (context, scrollController) => Container(
+              height: displayHeight(context) * 0.9,
+              decoration: BoxDecoration(
+                color: beigeColor,
+              ),
+              child: CenteredView(
+                child: ListView(
+                  shrinkWrap: true,
+                  physics: BouncingScrollPhysics(),
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconButton(
+                          icon: Icon(
+                            Icons.arrow_back_ios,
+                            color: brownColor,
+                            size: displayWidth(context) * 0.025,
+                          ),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Pointify',
+                              style: TextStyle(
+                                color: brownColor,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w200,
+                                fontSize: displayWidth(context) * 0.025,
+                              ),
+                            ),
+                            TweenAnimationBuilder(
+                              duration: Duration(milliseconds: 1000),
+                              tween: Tween<double>(
+                                begin: 0,
+                                end: displayWidth(context) * 0.08,
+                              ),
+                              builder: (context, value, child) {
+                                return AnimatedContainer(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(30),
+                                    color: brownColor,
+                                  ),
+                                  duration: Duration(milliseconds: 200),
+                                  width: value,
+                                  height: 2.5,
+                                );
+                              },
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Text(
+                      "Pointify helps assign meaning and value to each task you perform. \nBy converting Work to Points earned and leisure activities to Rewards which can be spent, the user is able to manage and make the most out of their lives. \nIts like a Wallet, but for your life. \nFocused on a really clean and simple design, with an absolutely slick Dark Theme.",
+                      style: TextStyle(
+                        color: aquaColor,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w200,
+                        fontSize: displayWidth(context) * 0.02,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        PointifyProjectButton(),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      height: displayHeight(context) * 0.8,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage(
+                                'assets/images/workbg/pointify/pointifydetails.png'),
+                          )),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          );
         },
         child: TweenAnimationBuilder(
           tween: Tween<double>(
@@ -704,7 +1253,113 @@ class _ArenaDetailsButtonState extends State<ArenaDetailsButton> {
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: () {
-          launch("tel:+919650693092");
+          showMaterialModalBottomSheet(
+            enableDrag: false,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
+            )),
+            context: context,
+            builder: (context, scrollController) => Container(
+              height: displayHeight(context) * 0.9,
+              decoration: BoxDecoration(
+                color: beigeColor,
+              ),
+              child: CenteredView(
+                child: ListView(
+                  shrinkWrap: true,
+                  physics: BouncingScrollPhysics(),
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconButton(
+                          icon: Icon(
+                            Icons.arrow_back_ios,
+                            color: brownColor,
+                            size: displayWidth(context) * 0.025,
+                          ),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Arena',
+                              style: TextStyle(
+                                color: brownColor,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w200,
+                                fontSize: displayWidth(context) * 0.025,
+                              ),
+                            ),
+                            TweenAnimationBuilder(
+                              duration: Duration(milliseconds: 1000),
+                              tween: Tween<double>(
+                                begin: 0,
+                                end: displayWidth(context) * 0.06,
+                              ),
+                              builder: (context, value, child) {
+                                return AnimatedContainer(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(30),
+                                    color: brownColor,
+                                  ),
+                                  duration: Duration(milliseconds: 200),
+                                  width: value,
+                                  height: 2.5,
+                                );
+                              },
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Text(
+                      "Arena, my first foray in the world of Flutter and App Development. \nArena was made as part of a Project Submission for College. \nAn Android App to stay updated on your favorite team's score, upcoming matches and the league table.",
+                      style: TextStyle(
+                        color: aquaColor,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w200,
+                        fontSize: displayWidth(context) * 0.02,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ArenaProjectButton(),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      height: displayHeight(context) * 0.8,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage(
+                                'assets/images/workbg/arena/arenadetails.png'),
+                          )),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          );
         },
         child: TweenAnimationBuilder(
           tween: Tween<double>(
@@ -800,7 +1455,113 @@ class _UjjayDetailsButtonState extends State<UjjayDetailsButton> {
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: () {
-          launch("tel:+919650693092");
+          showMaterialModalBottomSheet(
+            enableDrag: false,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
+            )),
+            context: context,
+            builder: (context, scrollController) => Container(
+              height: displayHeight(context) * 0.9,
+              decoration: BoxDecoration(
+                color: beigeColor,
+              ),
+              child: CenteredView(
+                child: ListView(
+                  shrinkWrap: true,
+                  physics: BouncingScrollPhysics(),
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconButton(
+                          icon: Icon(
+                            Icons.arrow_back_ios,
+                            color: brownColor,
+                            size: displayWidth(context) * 0.025,
+                          ),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Ujjay Kisan',
+                              style: TextStyle(
+                                color: brownColor,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w200,
+                                fontSize: displayWidth(context) * 0.025,
+                              ),
+                            ),
+                            TweenAnimationBuilder(
+                              duration: Duration(milliseconds: 1000),
+                              tween: Tween<double>(
+                                begin: 0,
+                                end: displayWidth(context) * 0.12,
+                              ),
+                              builder: (context, value, child) {
+                                return AnimatedContainer(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(30),
+                                    color: brownColor,
+                                  ),
+                                  duration: Duration(milliseconds: 200),
+                                  width: value,
+                                  height: 2.5,
+                                );
+                              },
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Text(
+                      "Worked closely with the team responsible for developing Ujjay Kisan. \nHelped the bring a fresh new look to the app, alongside with helping them bring up various new enhancements and features. \nUsed Flutter to write the Application from scratch. The various new features and greatly enhanced design are all an aid to the goal of providing modern and connected agriculture",
+                      style: TextStyle(
+                        color: aquaColor,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w200,
+                        fontSize: displayWidth(context) * 0.02,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        UjjayProjectButton(),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      height: displayHeight(context) * 0.8,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage(
+                                'assets/images/workbg/ujjay/ujjaydetails.png'),
+                          )),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          );
         },
         child: TweenAnimationBuilder(
           tween: Tween<double>(
