@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:threshold/buttons.dart';
 import 'package:threshold/sizes_helper.dart';
 
 class ThresholdCard extends StatefulWidget {
@@ -7,28 +8,60 @@ class ThresholdCard extends StatefulWidget {
 }
 
 class _ThresholdCardState extends State<ThresholdCard> {
+  bool hover = false;
+  double opacity = 1.0;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: displayHeight(context) * 0.6,
-      child: Row(
-        children: [
-          Column(
-            children: [
-              Container(
-                height: displayHeight(context) * 0.5,
-                width: displayWidth(context) * 0.6,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(30)),
-                  child: Image.asset(
-                    'assets/images/workbg/Threshold.png',
-                    fit: BoxFit.cover,
+      height: displayHeight(context) * 0.7,
+      child: MouseRegion(
+        onEnter: (event) {
+          setState(() {
+            hover = true;
+            opacity = 0.4;
+          });
+        },
+        onExit: (event) {
+          setState(() {
+            hover = false;
+            opacity = 1.0;
+          });
+        },
+        child: Stack(
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  child: AnimatedOpacity(
+                    curve: Curves.easeInOut,
+                    duration: Duration(milliseconds: 300),
+                    opacity: opacity,
+                    child: AnimatedContainer(
+                      duration: Duration(milliseconds: 200),
+                      height: displayHeight(context) * 0.7,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(30)),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image:
+                              AssetImage('assets/images/workbg/Threshold.png'),
+                        ),
+                      ),
+                      //width: displayWidth(context) * 0.9,
+                    ),
                   ),
                 ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: (hover) ? ThresholdDetailsButton() : null,
               ),
-            ],
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -40,28 +73,59 @@ class ArenaCard extends StatefulWidget {
 }
 
 class _ArenaCardState extends State<ArenaCard> {
+  bool hover = false;
+  double opacity = 1.0;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: displayHeight(context) * 0.6,
-      child: Row(
-        children: [
-          Column(
-            children: [
-              Container(
-                height: displayHeight(context) * 0.5,
-                width: displayWidth(context) * 0.6,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(30)),
-                  child: Image.asset(
-                    'assets/images/workbg/Arena.png',
-                    fit: BoxFit.cover,
+      height: displayHeight(context) * 0.7,
+      child: MouseRegion(
+        onEnter: (event) {
+          setState(() {
+            hover = true;
+            opacity = 0.4;
+          });
+        },
+        onExit: (event) {
+          setState(() {
+            hover = false;
+            opacity = 1.0;
+          });
+        },
+        child: Stack(
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  child: AnimatedOpacity(
+                    curve: Curves.easeInOut,
+                    duration: Duration(milliseconds: 300),
+                    opacity: opacity,
+                    child: AnimatedContainer(
+                      duration: Duration(milliseconds: 200),
+                      height: displayHeight(context) * 0.7,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(30)),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('assets/images/workbg/Arena.png'),
+                        ),
+                      ),
+                      //width: displayWidth(context) * 0.9,
+                    ),
                   ),
                 ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: (hover) ? ArenaDetailsButton() : null,
               ),
-            ],
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -73,28 +137,59 @@ class HustleCard extends StatefulWidget {
 }
 
 class _HustleCardState extends State<HustleCard> {
+  bool hover = false;
+  double opacity = 1.0;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: displayHeight(context) * 0.6,
-      child: Row(
-        children: [
-          Column(
-            children: [
-              Container(
-                height: displayHeight(context) * 0.5,
-                width: displayWidth(context) * 0.6,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(30)),
-                  child: Image.asset(
-                    'assets/images/workbg/Hustle.png',
-                    fit: BoxFit.cover,
+      height: displayHeight(context) * 0.7,
+      child: MouseRegion(
+        onEnter: (event) {
+          setState(() {
+            hover = true;
+            opacity = 0.4;
+          });
+        },
+        onExit: (event) {
+          setState(() {
+            hover = false;
+            opacity = 1.0;
+          });
+        },
+        child: Stack(
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  child: AnimatedOpacity(
+                    curve: Curves.easeInOut,
+                    duration: Duration(milliseconds: 300),
+                    opacity: opacity,
+                    child: AnimatedContainer(
+                      duration: Duration(milliseconds: 200),
+                      height: displayHeight(context) * 0.7,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(30)),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('assets/images/workbg/Hustle.png'),
+                        ),
+                      ),
+                      //width: displayWidth(context) * 0.9,
+                    ),
                   ),
                 ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: (hover) ? HustleDetailsButton() : null,
               ),
-            ],
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -106,28 +201,124 @@ class PointifyCard extends StatefulWidget {
 }
 
 class _PointifyCardState extends State<PointifyCard> {
+  bool hover = false;
+  double opacity = 1.0;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: displayHeight(context) * 0.6,
-      child: Row(
-        children: [
-          Column(
-            children: [
-              Container(
-                height: displayHeight(context) * 0.5,
-                width: displayWidth(context) * 0.6,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(30)),
-                  child: Image.asset(
-                    'assets/images/workbg/Pointify.png',
-                    fit: BoxFit.cover,
+      height: displayHeight(context) * 0.7,
+      child: MouseRegion(
+        onEnter: (event) {
+          setState(() {
+            hover = true;
+            opacity = 0.4;
+          });
+        },
+        onExit: (event) {
+          setState(() {
+            hover = false;
+            opacity = 1.0;
+          });
+        },
+        child: Stack(
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  child: AnimatedOpacity(
+                    curve: Curves.easeInOut,
+                    duration: Duration(milliseconds: 300),
+                    opacity: opacity,
+                    child: AnimatedContainer(
+                      duration: Duration(milliseconds: 200),
+                      height: displayHeight(context) * 0.7,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(30)),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image:
+                              AssetImage('assets/images/workbg/Pointify.png'),
+                        ),
+                      ),
+                      //width: displayWidth(context) * 0.9,
+                    ),
                   ),
                 ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: (hover) ? PointifyDetailsButton() : null,
               ),
-            ],
-          ),
-        ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class UjjayCard extends StatefulWidget {
+  @override
+  _UjjayCardState createState() => _UjjayCardState();
+}
+
+class _UjjayCardState extends State<UjjayCard> {
+  bool hover = false;
+  double opacity = 1.0;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: displayHeight(context) * 0.7,
+      child: MouseRegion(
+        onEnter: (event) {
+          setState(() {
+            hover = true;
+            opacity = 0.4;
+          });
+        },
+        onExit: (event) {
+          setState(() {
+            hover = false;
+            opacity = 1.0;
+          });
+        },
+        child: Stack(
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  child: AnimatedOpacity(
+                    curve: Curves.easeInOut,
+                    duration: Duration(milliseconds: 300),
+                    opacity: opacity,
+                    child: AnimatedContainer(
+                      duration: Duration(milliseconds: 200),
+                      height: displayHeight(context) * 0.7,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(30)),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('assets/images/workbg/Ujjay.png'),
+                        ),
+                      ),
+                      //width: displayWidth(context) * 0.9,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: (hover) ? PointifyDetailsButton() : null,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

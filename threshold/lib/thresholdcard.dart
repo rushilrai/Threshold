@@ -14,7 +14,7 @@ class _ThresholdCardState extends State<ThresholdCard> {
     return MouseRegion(
       child: AnimatedContainer(
         duration: Duration(milliseconds: 800),
-        width: displayWidth(context) * 0.40,
+        width: displayWidth(context) * 0.42,
         height: displayWidth(context) * 0.32,
         decoration: BoxDecoration(
           boxShadow: [
@@ -30,7 +30,7 @@ class _ThresholdCardState extends State<ThresholdCard> {
           borderRadius: BorderRadius.all(Radius.circular(30)),
           child: Image.asset(
             'assets/images/Threshold.png',
-            fit: BoxFit.fill,
+            fit: BoxFit.cover,
           ),
         ),
       ).moveDownOnHover,

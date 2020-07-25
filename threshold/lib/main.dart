@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:threshold/aboutpage.dart';
 import 'package:threshold/workspage.dart';
 
-
 import 'landingpage.dart';
-
 
 void main() {
   runApp(MyApp());
@@ -16,16 +14,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
       initialRoute: '/landing',
       routes: {
-    '/landing': (context) => LandingPage(),
-    '/about': (context) => AboutPage(),
-    '/works': (context) => WorksPage(),
-  },
+        '/landing': (context) => LandingPage(),
+        '/about': (context) => AboutPage(),
+        '/works': (context) => WorksPage(),
+      },
     );
   }
 }
-

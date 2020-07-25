@@ -4,8 +4,6 @@ import 'package:threshold/colors.dart';
 import 'package:threshold/navbar_works.dart';
 import 'package:threshold/workcards.dart';
 
-import 'sizes_helper.dart';
-
 class WorksPage extends StatefulWidget {
   @override
   _WorksPageState createState() => _WorksPageState();
@@ -22,20 +20,27 @@ class _WorksPageState extends State<WorksPage> {
           children: <Widget>[
             NavBarWorks(),
             SizedBox(
+              height: 50,
+            ),
+            ThresholdCard(),
+            SizedBox(
               height: 20,
             ),
-            Container(
-              height: displayHeight(context) * 0.8,
-              child: ListView(
-                physics: BouncingScrollPhysics(),
-                shrinkWrap: true,
-                children: [
-                  ThresholdCard(),
-                  ArenaCard(),
-                  HustleCard(),
-                  PointifyCard(),
-                ],
-              ),
+            UjjayCard(),
+            SizedBox(
+              height: 20,
+            ),
+            PointifyCard(),
+            SizedBox(
+              height: 20,
+            ),
+            HustleCard(),
+            SizedBox(
+              height: 20,
+            ),
+            ArenaCard(),
+            SizedBox(
+              height: 50,
             ),
           ],
         ),

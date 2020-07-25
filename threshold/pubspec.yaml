@@ -18,7 +18,7 @@ dependencies:
   url_launcher_web: ^0.1.1+6
   url_launcher: ^5.4.11
   dwds: ^5.0.0
-  carousel_slider: ^2.2.1
+  carousel_pro: ^1.0.0
 
   cupertino_icons: ^0.1.3
 
@@ -86,3 +86,4 @@ flutter:
     - assets/images/workbg/Arena.png
     - assets/images/workbg/Hustle.png
     - assets/images/workbg/Pointify.png
+    - assets/images/workbg/Ujjay.png

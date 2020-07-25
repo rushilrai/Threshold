@@ -382,3 +382,483 @@ class _PhoneButtonState extends State<PhoneButton> {
     );
   }
 }
+
+class ThresholdDetailsButton extends StatefulWidget {
+  @override
+  _ThresholdDetailsButtonState createState() => _ThresholdDetailsButtonState();
+}
+
+class _ThresholdDetailsButtonState extends State<ThresholdDetailsButton> {
+  List<Color> colors = [beigeColor, beigeColor];
+  Offset lightShadow = Offset(-5, -5);
+  Offset darkShadow = Offset(5, 5);
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (event) {
+        setState(() {
+          lightShadow = Offset(0, 0);
+          darkShadow = Offset(0, 0);
+          colors = [
+            //    Color.fromRGBO(255, 254, 239, 1),
+            Color.fromRGBO(230, 213, 201, 1),
+            Color.fromRGBO(250, 239, 232, 1),
+          ];
+        });
+      },
+      onExit: (event) {
+        setState(() {
+          lightShadow = Offset(-5, -5);
+          darkShadow = Offset(5, 5);
+          colors = [beigeColor, beigeColor];
+        });
+      },
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: () {
+          launch("tel:+919650693092");
+        },
+        child: TweenAnimationBuilder(
+          tween: Tween<double>(
+            begin: 0.0,
+            end: 1.0,
+          ),
+          duration: Duration(milliseconds: 300),
+          builder: (context, value, child) {
+            return AnimatedOpacity(
+              duration: Duration(milliseconds: 300),
+              opacity: value,
+              child: AnimatedContainer(
+                duration: Duration(milliseconds: 300),
+                height: displayWidth(context) * 0.025,
+                width: displayWidth(context) * 0.13,
+                decoration: BoxDecoration(
+                  color: beigeColor,
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: colors,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: lightshadowColor,
+                      offset: lightShadow,
+                      blurRadius: 10,
+                    ),
+                    BoxShadow(
+                      color: darkshadowColor,
+                      offset: darkShadow,
+                      blurRadius: 10,
+                    ),
+                  ],
+                  borderRadius: BorderRadius.all(Radius.circular(17)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        'Read More',
+                        style: TextStyle(
+                          color: brownColor,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w200,
+                          fontSize: displayWidth(context) * 0.012,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+class HustleDetailsButton extends StatefulWidget {
+  @override
+  _HustleDetailsButtonState createState() => _HustleDetailsButtonState();
+}
+
+class _HustleDetailsButtonState extends State<HustleDetailsButton> {
+  List<Color> colors = [beigeColor, beigeColor];
+  Offset lightShadow = Offset(-5, -5);
+  Offset darkShadow = Offset(5, 5);
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (event) {
+        setState(() {
+          lightShadow = Offset(0, 0);
+          darkShadow = Offset(0, 0);
+          colors = [
+            //    Color.fromRGBO(255, 254, 239, 1),
+            Color.fromRGBO(230, 213, 201, 1),
+            Color.fromRGBO(250, 239, 232, 1),
+          ];
+        });
+      },
+      onExit: (event) {
+        setState(() {
+          lightShadow = Offset(-5, -5);
+          darkShadow = Offset(5, 5);
+          colors = [beigeColor, beigeColor];
+        });
+      },
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: () {
+          launch("tel:+919650693092");
+        },
+        child: TweenAnimationBuilder(
+          tween: Tween<double>(
+            begin: 0.0,
+            end: 1.0,
+          ),
+          duration: Duration(milliseconds: 300),
+          builder: (context, value, child) {
+            return AnimatedOpacity(
+              duration: Duration(milliseconds: 300),
+              opacity: value,
+              child: AnimatedContainer(
+                duration: Duration(milliseconds: 300),
+                height: displayWidth(context) * 0.025,
+                width: displayWidth(context) * 0.13,
+                decoration: BoxDecoration(
+                  color: beigeColor,
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: colors,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: lightshadowColor,
+                      offset: lightShadow,
+                      blurRadius: 10,
+                    ),
+                    BoxShadow(
+                      color: darkshadowColor,
+                      offset: darkShadow,
+                      blurRadius: 10,
+                    ),
+                  ],
+                  borderRadius: BorderRadius.all(Radius.circular(17)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        'Read More',
+                        style: TextStyle(
+                          color: brownColor,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w200,
+                          fontSize: displayWidth(context) * 0.012,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+class PointifyDetailsButton extends StatefulWidget {
+  @override
+  _PointifyDetailsButtonState createState() => _PointifyDetailsButtonState();
+}
+
+class _PointifyDetailsButtonState extends State<PointifyDetailsButton> {
+  List<Color> colors = [beigeColor, beigeColor];
+  Offset lightShadow = Offset(-5, -5);
+  Offset darkShadow = Offset(5, 5);
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (event) {
+        setState(() {
+          lightShadow = Offset(0, 0);
+          darkShadow = Offset(0, 0);
+          colors = [
+            //    Color.fromRGBO(255, 254, 239, 1),
+            Color.fromRGBO(230, 213, 201, 1),
+            Color.fromRGBO(250, 239, 232, 1),
+          ];
+        });
+      },
+      onExit: (event) {
+        setState(() {
+          lightShadow = Offset(-5, -5);
+          darkShadow = Offset(5, 5);
+          colors = [beigeColor, beigeColor];
+        });
+      },
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: () {
+          launch("tel:+919650693092");
+        },
+        child: TweenAnimationBuilder(
+          tween: Tween<double>(
+            begin: 0.0,
+            end: 1.0,
+          ),
+          duration: Duration(milliseconds: 300),
+          builder: (context, value, child) {
+            return AnimatedOpacity(
+              duration: Duration(milliseconds: 300),
+              opacity: value,
+              child: AnimatedContainer(
+                duration: Duration(milliseconds: 300),
+                height: displayWidth(context) * 0.025,
+                width: displayWidth(context) * 0.13,
+                decoration: BoxDecoration(
+                  color: beigeColor,
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: colors,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: lightshadowColor,
+                      offset: lightShadow,
+                      blurRadius: 10,
+                    ),
+                    BoxShadow(
+                      color: darkshadowColor,
+                      offset: darkShadow,
+                      blurRadius: 10,
+                    ),
+                  ],
+                  borderRadius: BorderRadius.all(Radius.circular(17)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        'Read More',
+                        style: TextStyle(
+                          color: brownColor,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w200,
+                          fontSize: displayWidth(context) * 0.012,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+class ArenaDetailsButton extends StatefulWidget {
+  @override
+  _ArenaDetailsButtonState createState() => _ArenaDetailsButtonState();
+}
+
+class _ArenaDetailsButtonState extends State<ArenaDetailsButton> {
+  List<Color> colors = [beigeColor, beigeColor];
+  Offset lightShadow = Offset(-5, -5);
+  Offset darkShadow = Offset(5, 5);
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (event) {
+        setState(() {
+          lightShadow = Offset(0, 0);
+          darkShadow = Offset(0, 0);
+          colors = [
+            //    Color.fromRGBO(255, 254, 239, 1),
+            Color.fromRGBO(230, 213, 201, 1),
+            Color.fromRGBO(250, 239, 232, 1),
+          ];
+        });
+      },
+      onExit: (event) {
+        setState(() {
+          lightShadow = Offset(-5, -5);
+          darkShadow = Offset(5, 5);
+          colors = [beigeColor, beigeColor];
+        });
+      },
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: () {
+          launch("tel:+919650693092");
+        },
+        child: TweenAnimationBuilder(
+          tween: Tween<double>(
+            begin: 0.0,
+            end: 1.0,
+          ),
+          duration: Duration(milliseconds: 300),
+          builder: (context, value, child) {
+            return AnimatedOpacity(
+              duration: Duration(milliseconds: 300),
+              opacity: value,
+              child: AnimatedContainer(
+                duration: Duration(milliseconds: 300),
+                height: displayWidth(context) * 0.025,
+                width: displayWidth(context) * 0.13,
+                decoration: BoxDecoration(
+                  color: beigeColor,
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: colors,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: lightshadowColor,
+                      offset: lightShadow,
+                      blurRadius: 10,
+                    ),
+                    BoxShadow(
+                      color: darkshadowColor,
+                      offset: darkShadow,
+                      blurRadius: 10,
+                    ),
+                  ],
+                  borderRadius: BorderRadius.all(Radius.circular(17)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        'Read More',
+                        style: TextStyle(
+                          color: brownColor,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w200,
+                          fontSize: displayWidth(context) * 0.012,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+class UjjayDetailsButton extends StatefulWidget {
+  @override
+  _UjjayDetailsButtonState createState() => _UjjayDetailsButtonState();
+}
+
+class _UjjayDetailsButtonState extends State<UjjayDetailsButton> {
+  List<Color> colors = [beigeColor, beigeColor];
+  Offset lightShadow = Offset(-5, -5);
+  Offset darkShadow = Offset(5, 5);
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (event) {
+        setState(() {
+          lightShadow = Offset(0, 0);
+          darkShadow = Offset(0, 0);
+          colors = [
+            //    Color.fromRGBO(255, 254, 239, 1),
+            Color.fromRGBO(230, 213, 201, 1),
+            Color.fromRGBO(250, 239, 232, 1),
+          ];
+        });
+      },
+      onExit: (event) {
+        setState(() {
+          lightShadow = Offset(-5, -5);
+          darkShadow = Offset(5, 5);
+          colors = [beigeColor, beigeColor];
+        });
+      },
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: () {
+          launch("tel:+919650693092");
+        },
+        child: TweenAnimationBuilder(
+          tween: Tween<double>(
+            begin: 0.0,
+            end: 1.0,
+          ),
+          duration: Duration(milliseconds: 300),
+          builder: (context, value, child) {
+            return AnimatedOpacity(
+              duration: Duration(milliseconds: 300),
+              opacity: value,
+              child: AnimatedContainer(
+                duration: Duration(milliseconds: 300),
+                height: displayWidth(context) * 0.025,
+                width: displayWidth(context) * 0.13,
+                decoration: BoxDecoration(
+                  color: beigeColor,
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: colors,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: lightshadowColor,
+                      offset: lightShadow,
+                      blurRadius: 10,
+                    ),
+                    BoxShadow(
+                      color: darkshadowColor,
+                      offset: darkShadow,
+                      blurRadius: 10,
+                    ),
+                  ],
+                  borderRadius: BorderRadius.all(Radius.circular(17)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        'Read More',
+                        style: TextStyle(
+                          color: brownColor,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w200,
+                          fontSize: displayWidth(context) * 0.012,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
