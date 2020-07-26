@@ -112,7 +112,7 @@ class _AboutPageState extends State<AboutPage> {
                               Row(
                                 children: <Widget>[
                                   Text(
-                                    'A CompSci. Undergrad, based in Chennai.',
+                                    'A CompSci. Undergrad, based in India.',
                                     style: TextStyle(
                                       color: aquaColor,
                                       fontFamily: 'Poppins',

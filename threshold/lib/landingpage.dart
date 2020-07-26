@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 import 'package:threshold/buttons.dart';
 import 'package:threshold/centeredview.dart';
 import 'package:threshold/colors.dart';
@@ -18,60 +19,70 @@ class _LandingPageState extends State<LandingPage> {
     return Scaffold(
       backgroundColor: beigeColor,
       body: CenteredView(
-        child: ListView(
-          physics: BouncingScrollPhysics(),
-          children: <Widget>[
-            NavBar(),
-            SizedBox(
-              height: 50,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Column(
-                  children: <Widget>[
-                    ThresholdCard(),
-                  ],
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: <Widget>[
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: <Widget>[
-                        LandingTextOne(),
-                        LandingTextTwo(),
-                        LandingTextThree(),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 200,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 15.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
+        child: ResponsiveBuilder(
+          builder: (context, sizingInformation) {
+            if (sizingInformation.deviceScreenType ==
+                DeviceScreenType.Desktop) {
+              return ListView(
+                physics: BouncingScrollPhysics(),
+                children: <Widget>[
+                  NavBar(),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Column(
                         children: <Widget>[
-                          GithubButton(),
-                          SizedBox(
-                            width: 50,
-                          ),
-                          LinkedinButton(),
-                          SizedBox(
-                            width: 50,
-                          ),
-                          InstagramButton(),
+                          ThresholdCard(),
                         ],
                       ),
-                    ),
-                  ],
-                )
-              ],
-            ),
-            SizedBox(
-              height: 100,
-            ),
-          ],
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: <Widget>[
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: <Widget>[
+                              LandingTextOne(),
+                              LandingTextTwo(),
+                              LandingTextThree(),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 200,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 15.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: <Widget>[
+                                GithubButton(),
+                                SizedBox(
+                                  width: 50,
+                                ),
+                                LinkedinButton(),
+                                SizedBox(
+                                  width: 50,
+                                ),
+                                InstagramButton(),
+                              ],
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 100,
+                  ),
+                ],
+              );
+            }
+            return Container(
+              child: Center(child: Text('Mobile View Under Construction')),
+            );
+          },
         ),
       ),
     );

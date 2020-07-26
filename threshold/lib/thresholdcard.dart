@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:threshold/colors.dart';
-import 'package:threshold/hover_extensions.dart';
 import 'package:threshold/sizes_helper.dart';
 
 class ThresholdCard extends StatefulWidget {
