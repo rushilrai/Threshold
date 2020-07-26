@@ -905,7 +905,7 @@ class _ThresholdDetailsButtonState extends State<ThresholdDetailsButton> {
                       height: 30,
                     ),
                     Text(
-                      "Threshold, the name of my first Portfolio Website. \nIt features all my Projects and Work, and also a few things you would like to know about me. \nTried to experiment with a different design as compared to most Pother Portfolio websites.",
+                      "Threshold, the name of my first Portfolio Website. \nIt features all my Projects and Work, and also a few things you would like to know about me. \nTried to experiment with a different design as compared to most other Portfolio websites.",
                       style: TextStyle(
                         color: aquaColor,
                         fontFamily: 'Poppins',
