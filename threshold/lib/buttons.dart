@@ -883,7 +883,7 @@ class _ThresholdDetailsButtonState extends State<ThresholdDetailsButton> {
                               duration: Duration(milliseconds: 1000),
                               tween: Tween<double>(
                                 begin: 0,
-                                end: displayWidth(context) * 0.1,
+                                end: displayWidth(context) * 0.05,
                               ),
                               builder: (context, value, child) {
                                 return AnimatedContainer(
@@ -1116,7 +1116,7 @@ class _HustleDetailsButtonState extends State<HustleDetailsButton> {
                               duration: Duration(milliseconds: 1000),
                               tween: Tween<double>(
                                 begin: 0,
-                                end: displayWidth(context) * 0.06,
+                                end: displayWidth(context) * 0.05,
                               ),
                               builder: (context, value, child) {
                                 return AnimatedContainer(
@@ -1318,7 +1318,7 @@ class _PointifyDetailsButtonState extends State<PointifyDetailsButton> {
                               duration: Duration(milliseconds: 1000),
                               tween: Tween<double>(
                                 begin: 0,
-                                end: displayWidth(context) * 0.08,
+                                end: displayWidth(context) * 0.05,
                               ),
                               builder: (context, value, child) {
                                 return AnimatedContainer(
@@ -1520,7 +1520,7 @@ class _ArenaDetailsButtonState extends State<ArenaDetailsButton> {
                               duration: Duration(milliseconds: 1000),
                               tween: Tween<double>(
                                 begin: 0,
-                                end: displayWidth(context) * 0.06,
+                                end: displayWidth(context) * 0.05,
                               ),
                               builder: (context, value, child) {
                                 return AnimatedContainer(
@@ -1722,7 +1722,7 @@ class _UjjayDetailsButtonState extends State<UjjayDetailsButton> {
                               duration: Duration(milliseconds: 1000),
                               tween: Tween<double>(
                                 begin: 0,
-                                end: displayWidth(context) * 0.12,
+                                end: displayWidth(context) * 0.05,
                               ),
                               builder: (context, value, child) {
                                 return AnimatedContainer(

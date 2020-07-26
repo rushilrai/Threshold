@@ -76,6 +76,7 @@ flutter:
 
   assets: 
     - assets/images/Threshold.png
+    - assets/images/bg-threshold.png
     - assets/images/Education.png
     - assets/images/Skills.png
     - assets/images/Intro.png

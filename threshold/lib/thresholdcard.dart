@@ -9,31 +9,85 @@ class ThresholdCard extends StatefulWidget {
 }
 
 class _ThresholdCardState extends State<ThresholdCard> {
+  double shadow = 25;
+  double radius = 30;
+  double scale = 1.0;
+  double opacity = 1.0;
+  Color textColor = Color.fromRGBO(255, 255, 255, 0.8);
+  bool hover = false;
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
-      child: AnimatedContainer(
-        duration: Duration(milliseconds: 800),
-        width: displayWidth(context) * 0.42,
-        height: displayWidth(context) * 0.32,
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              offset: Offset(25, 25),
-              color: thresholdshadowColor,
-              blurRadius: 25,
+      onEnter: (event) {
+        setState(() {
+          textColor = brownColor;
+          opacity = 0.3;
+          hover = true;
+          shadow = 0;
+        });
+      },
+      onExit: (event) {
+        setState(() {
+          textColor = Color.fromRGBO(255, 255, 255, 0.8);
+          opacity = 1.0;
+          hover = false;
+          shadow = 10;
+        });
+      },
+      child: Stack(
+        children: [
+          AnimatedOpacity(
+            opacity: opacity,
+            duration: Duration(milliseconds: 300),
+            child: AnimatedContainer(
+              duration: Duration(milliseconds: 300),
+              width: displayWidth(context) * 0.42,
+              height: displayWidth(context) * 0.32,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage('assets/images/bg-threshold.png'),
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    offset: Offset(shadow, shadow),
+                    color: thresholdshadowColor,
+                    blurRadius: 25,
+                  ),
+                ],
+                borderRadius: BorderRadius.all(
+                  Radius.circular(radius),
+                ),
+              ),
             ),
-          ],
-          borderRadius: BorderRadius.all(Radius.circular(30)),
-        ),
-        child: ClipRRect(
-          borderRadius: BorderRadius.all(Radius.circular(30)),
-          child: Image.asset(
-            'assets/images/Threshold.png',
-            fit: BoxFit.cover,
           ),
-        ),
-      ).moveDownOnHover,
+          Align(
+            child: Container(
+              width: displayWidth(context) * 0.42,
+              height: displayWidth(context) * 0.32,
+              child: Center(
+                child: AnimatedDefaultTextStyle(
+                  duration: Duration(milliseconds: 300),
+                  child: Text('Threshold.'),
+                  style: (hover)
+                      ? TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: displayWidth(context) * 0.07,
+                          fontWeight: FontWeight.w800,
+                          color: aquaColor,
+                        )
+                      : TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: displayWidth(context) * 0.06,
+                          fontWeight: FontWeight.w800,
+                          color: textColor,
+                        ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
