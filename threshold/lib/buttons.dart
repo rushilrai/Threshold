@@ -279,7 +279,7 @@ class _EmailButtonState extends State<EmailButton> {
                   size: displayWidth(context) * 0.012,
                   color: brownColor,
                 ),
-                Text(
+                SelectableText(
                   'rushil.rai999@gmail.com',
                   style: TextStyle(
                     color: brownColor,
@@ -367,7 +367,7 @@ class _PhoneButtonState extends State<PhoneButton> {
                   size: displayWidth(context) * 0.012,
                   color: brownColor,
                 ),
-                Text(
+                SelectableText(
                   '(+91) 9650693092',
                   style: TextStyle(
                     color: brownColor,
