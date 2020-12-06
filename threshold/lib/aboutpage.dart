@@ -178,7 +178,7 @@ class _AboutPageState extends State<AboutPage> {
                                     Row(
                                       children: <Widget>[
                                         Text(
-                                          'lies in building inituitive, attractive &',
+                                          'lies in building intuitive, attractive &',
                                           style: TextStyle(
                                             color: aquaColor,
                                             fontFamily: 'Poppins',
