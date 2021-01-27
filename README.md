@@ -3,7 +3,7 @@ Threshold, the name of my first Portfolio Website.
 It features all my Projects and Work, and also a few things you would like to know about me. 
 Tried to experiment with a different design as compared to most other Portfolio websites.
 
-As for the name, Threshold represents A Beginning Point.
+As for the name, Threshold represents A Beginning.
 
 https://threshold-6dc8f.web.app/#/landing
 
