@@ -844,7 +844,7 @@ class _ThresholdDetailsButtonState extends State<ThresholdDetailsButton> {
               topRight: Radius.circular(30),
             )),
             context: context,
-            builder: (context, scrollController) => Container(
+            builder: (context) => Container(
               height: displayHeight(context) * 0.9,
               decoration: BoxDecoration(
                 color: beigeColor,
@@ -1077,7 +1077,7 @@ class _HustleDetailsButtonState extends State<HustleDetailsButton> {
               topRight: Radius.circular(30),
             )),
             context: context,
-            builder: (context, scrollController) => Container(
+            builder: (context) => Container(
               height: displayHeight(context) * 0.9,
               decoration: BoxDecoration(
                 color: beigeColor,
@@ -1279,7 +1279,7 @@ class _PointifyDetailsButtonState extends State<PointifyDetailsButton> {
               topRight: Radius.circular(30),
             )),
             context: context,
-            builder: (context, scrollController) => Container(
+            builder: (context) => Container(
               height: displayHeight(context) * 0.9,
               decoration: BoxDecoration(
                 color: beigeColor,
@@ -1481,7 +1481,7 @@ class _ArenaDetailsButtonState extends State<ArenaDetailsButton> {
               topRight: Radius.circular(30),
             )),
             context: context,
-            builder: (context, scrollController) => Container(
+            builder: (context) => Container(
               height: displayHeight(context) * 0.9,
               decoration: BoxDecoration(
                 color: beigeColor,
@@ -1683,7 +1683,7 @@ class _UjjayDetailsButtonState extends State<UjjayDetailsButton> {
               topRight: Radius.circular(30),
             )),
             context: context,
-            builder: (context, scrollController) => Container(
+            builder: (context) => Container(
               height: displayHeight(context) * 0.9,
               decoration: BoxDecoration(
                 color: beigeColor,
