@@ -18,7 +18,7 @@ dependencies:
   url_launcher_web: ^0.1.1+6
   url_launcher: ^5.4.11
   dwds: ^5.0.0
-  modal_bottom_sheet: ^0.2.0+1
+  modal_bottom_sheet: 2.0.0-nullsafety.1
 
   cupertino_icons: ^0.1.3
 
