@@ -207,11 +207,11 @@ class _LogoNavState extends State<LogoNav> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Hero(
-            tag: "rr",
+            tag: "zwang",
             child: Material(
               type: MaterialType.transparency,
               child: Text(
-                'RR.',
+                'Zhe Wang',
                 style: TextStyle(
                   color: blackColor,
                   fontFamily: 'Poppins',
