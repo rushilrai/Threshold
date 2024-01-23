@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:threshold/colors.dart';
+import 'package:threshold/common/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:threshold/sizes_helper.dart';
+import 'package:threshold/common/sizes_helper.dart';
 
 class EmailButton extends StatefulWidget {
   @override

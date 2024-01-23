@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:threshold/buttons.dart';
-import 'package:threshold/sizes_helper.dart';
+import 'package:threshold/common/sizes_helper.dart';
 
 class ThresholdCard extends StatefulWidget {
   @override

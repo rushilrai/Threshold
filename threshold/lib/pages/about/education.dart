@@ -1,15 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-import 'package:threshold/centeredview.dart';
-import 'package:threshold/colors.dart';
-import 'package:threshold/hover_extensions.dart';
-import 'package:threshold/navbar_about.dart';
-import 'package:threshold/sizes_helper.dart';
+import 'package:threshold/common/centeredview.dart';
+import 'package:threshold/common/colors.dart';
+import 'package:threshold/common/hover_extensions.dart';
+import 'package:threshold/navbar/about.dart';
+import 'package:threshold/common/sizes_helper.dart';
 
-import 'aboutpage.dart';
-import 'aboutpageskills.dart';
+import 'page.dart';
+import 'skills.dart';
 
 class AboutPageEdu extends StatefulWidget {
   @override
@@ -22,10 +19,9 @@ class _AboutPageEduState extends State<AboutPageEdu> {
     return Scaffold(
       backgroundColor: beigeColor,
       body: CenteredView(
-        child: ResponsiveBuilder(
-          builder: (context, sizingInformation) {
-            if (sizingInformation.deviceScreenType ==
-                DeviceScreenType.Desktop) {
+        child: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints) {
+            if (constraints.maxHeight > 800) {
               return ListView(
                 physics: BouncingScrollPhysics(),
                 children: <Widget>[

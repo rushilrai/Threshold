@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class TranslateOnHover2 extends StatefulWidget {
-  final Widget child;
-  TranslateOnHover2({Key key, this.child}) : super(key: key);
+class TranslateOnHover extends StatefulWidget {
+  final Widget? child;
+  TranslateOnHover({super.key, this.child});
 
   @override
-  _TranslateOnHover2State createState() => _TranslateOnHover2State();
+  _TranslateOnHoverState createState() => _TranslateOnHoverState();
 }
 
-class _TranslateOnHover2State extends State<TranslateOnHover2> {
-  final nonHoverTransform = Matrix4.identity()..translate(0, 0, 0);
-  final hoverTransform = Matrix4.identity()..translate(0, -5, 0);
+class _TranslateOnHoverState extends State<TranslateOnHover> {
+  final nonHoverTransform = Matrix4.identity()..scale(1);
+  final hoverTransform = Matrix4.identity()..scale(1.03);
 
   bool _hovering = false;
 

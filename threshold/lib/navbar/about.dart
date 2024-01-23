@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'navitems.dart';
+import 'package:threshold/navbar/navs/logo.dart';
+import 'package:threshold/navbar/navs/landing.dart';
+import 'package:threshold/navbar/navs/work.dart';
 
-class NavBar extends StatelessWidget {
+class NavBarAbout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -16,7 +18,7 @@ class NavBar extends StatelessWidget {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                AboutNav(),
+                LandingNav(),
                 SizedBox(
                   width: 60,
                 ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:threshold/sizes_helper.dart';
-import 'package:threshold/colors.dart';
+import 'package:threshold/common/sizes_helper.dart';
+import 'package:threshold/common/colors.dart';
 
 class LogoNav extends StatefulWidget {
   @override

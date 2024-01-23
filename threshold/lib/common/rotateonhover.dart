@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class RotateOnHover extends StatefulWidget {
-  final Widget child;
-  RotateOnHover({Key key, this.child}) : super(key: key);
+  final Widget? child;
+  RotateOnHover({super.key, this.child});
 
   @override
   _RotateOnHoverState createState() => _RotateOnHoverState();

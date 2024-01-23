@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
-import 'package:threshold/centeredview.dart';
-import 'package:threshold/colors.dart';
-import 'package:threshold/sizes_helper.dart';
+import 'package:threshold/common/centeredview.dart';
+import 'package:threshold/common/colors.dart';
+import 'package:threshold/common/sizes_helper.dart';
 import 'package:threshold/buttons/threshold_project_button.dart';
 
 class ThresholdDetailsButton extends StatefulWidget {

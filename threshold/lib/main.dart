@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:threshold/aboutpage.dart';
-import 'package:threshold/workspage.dart';
+import 'package:threshold/pages/about/page.dart';
+import 'package:threshold/pages/work/page.dart';
 
-import 'landingpage.dart';
+import 'pages/landing/page.dart';
 
 void main() {
   runApp(MyApp());

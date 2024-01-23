@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:threshold/sizes_helper.dart';
-import 'package:threshold/colors.dart';
-import 'package:threshold/hover_extensions.dart';
-import 'package:threshold/aboutpage.dart';
+import 'package:threshold/common/sizes_helper.dart';
+import 'package:threshold/common/colors.dart';
+import 'package:threshold/common/hover_extensions.dart';
+import 'package:threshold/pages/landing/page.dart';
 
-class AboutNav extends StatefulWidget {
+class LandingNav extends StatefulWidget {
   @override
-  _AboutNavState createState() => _AboutNavState();
+  _HomeNavState createState() => _HomeNavState();
 }
 
-class _AboutNavState extends State<AboutNav> {
+class _HomeNavState extends State<LandingNav> {
   double lineWidth = 0;
   @override
   Widget build(BuildContext context) {
@@ -29,18 +29,18 @@ class _AboutNavState extends State<AboutNav> {
       child: Column(
         children: [
           Hero(
-            tag: "about",
+            tag: "home",
             child: GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
-                  CupertinoPageRoute(builder: (context) => AboutPage()),
+                  CupertinoPageRoute(builder: (context) => LandingPage()),
                 );
               },
               child: Material(
                 type: MaterialType.transparency,
                 child: Text(
-                  'About',
+                  'Home',
                   style: TextStyle(
                     color: blackColor,
                     fontFamily: 'Poppins',

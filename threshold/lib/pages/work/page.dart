@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-import 'package:threshold/centeredview.dart';
-import 'package:threshold/colors.dart';
-import 'package:threshold/navbar_works.dart';
-import 'package:threshold/workcards.dart';
+import 'package:threshold/common/centeredview.dart';
+import 'package:threshold/common/colors.dart';
+import 'package:threshold/navbar/work.dart';
+import 'package:threshold/pages/work/cards.dart';
 
 class WorksPage extends StatefulWidget {
   @override
@@ -16,10 +15,9 @@ class _WorksPageState extends State<WorksPage> {
     return Scaffold(
       backgroundColor: beigeColor,
       body: CenteredView(
-        child: ResponsiveBuilder(
-          builder: (context, sizingInformation) {
-            if (sizingInformation.deviceScreenType ==
-                DeviceScreenType.Desktop) {
+        child: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints) {
+            if (constraints.maxHeight > 800) {
               return ListView(
                 physics: BouncingScrollPhysics(),
                 children: <Widget>[

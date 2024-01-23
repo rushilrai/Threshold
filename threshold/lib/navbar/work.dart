@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'navitems.dart';
+import 'package:threshold/navbar/navs/logo.dart';
+import 'package:threshold/navbar/navs/about.dart';
+import 'package:threshold/navbar/navs/landing.dart';
+
+
 
 class NavBarWorks extends StatelessWidget {
   @override
@@ -16,7 +20,7 @@ class NavBarWorks extends StatelessWidget {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                HomeNav(),
+                LandingNav(),
                 SizedBox(
                   width: 60,
                 ),

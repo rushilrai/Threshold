@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:threshold/sizes_helper.dart';
+import 'package:threshold/common/sizes_helper.dart';
 
-import 'colors.dart';
+import '../../common/colors.dart';
 
 class LandingTextOne extends StatelessWidget {
   @override

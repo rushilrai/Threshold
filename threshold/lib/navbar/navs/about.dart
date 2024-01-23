@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:threshold/sizes_helper.dart';
-import 'package:threshold/colors.dart';
-import 'package:threshold/hover_extensions.dart';
-import 'package:threshold/workspage.dart';
+import 'package:threshold/common/sizes_helper.dart';
+import 'package:threshold/common/colors.dart';
+import 'package:threshold/common/hover_extensions.dart';
+import 'package:threshold/pages/about/page.dart';
 
-class WorksNav extends StatefulWidget {
+class AboutNav extends StatefulWidget {
   @override
-  _WorksNavState createState() => _WorksNavState();
+  _AboutNavState createState() => _AboutNavState();
 }
 
-class _WorksNavState extends State<WorksNav> {
+class _AboutNavState extends State<AboutNav> {
   double lineWidth = 0;
   @override
   Widget build(BuildContext context) {
@@ -29,18 +29,18 @@ class _WorksNavState extends State<WorksNav> {
       child: Column(
         children: [
           Hero(
-            tag: "works",
+            tag: "about",
             child: GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
-                  CupertinoPageRoute(builder: (context) => WorksPage()),
+                  CupertinoPageRoute(builder: (context) => AboutPage()),
                 );
               },
               child: Material(
                 type: MaterialType.transparency,
                 child: Text(
-                  'Work',
+                  'About',
                   style: TextStyle(
                     color: blackColor,
                     fontFamily: 'Poppins',
